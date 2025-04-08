@@ -31,7 +31,7 @@ app.use(morgan("dev"))
 app.use(helmet())
 app.use(cors())
 app.use("/api/v1/auth", authRoutes)
-app.use("/api/v1/auth", userRoutes)
+app.use("/api/v1/users", userRoutes)
 app.use(errorMiddleware)
 
 const port = process.env.PORT || 3000

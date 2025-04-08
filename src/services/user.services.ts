@@ -18,7 +18,7 @@ export const getUserService = async (userId: string): Promise<AllUsers> => {
 }
 
 //UPDATE A PARTICULAR USERS
-export const updateUserInformation = async (userId: string, userData: AllUsers): Promise<AllUsers> => {
+export const updateUserService = async (userId: string, userData: AllUsers): Promise<AllUsers> => {
     const user = await UserModel.findById(userId)
     if(!user) throw new HttpException(404, "This User does not Exist!!!")
 
