@@ -20,6 +20,11 @@ mongoose.connect(
 })
 
 const app = express()
+app.get("/", (req: Request, res: Response, next: NextFunction) => {
+    res.status(200).json(
+        {"message": "Welcome to the Fitness Tracker API"}
+    )
+})
 app.use(express.json())
 app.use(compression())
 app.use(morgan("dev"))

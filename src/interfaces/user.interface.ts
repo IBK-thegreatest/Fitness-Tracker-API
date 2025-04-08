@@ -24,3 +24,7 @@ export interface UserInfo {
     role: string
     token: string
 }
+
+export interface AllUsers extends Register {
+    _id: any
+}
